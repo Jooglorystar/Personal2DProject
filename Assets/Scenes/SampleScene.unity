@@ -9445,6 +9445,7 @@ GameObject:
   - component: {fileID: 1813361417}
   - component: {fileID: 1813361419}
   - component: {fileID: 1813361420}
+  - component: {fileID: 1813361421}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -9542,7 +9543,7 @@ MonoBehaviour:
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 519420031}
+  m_Camera: {fileID: 0}
 --- !u!50 &1813361418
 Rigidbody2D:
   serializedVersion: 4
@@ -9594,6 +9595,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1122963926876146a68bc1143a138d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1813361421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813361414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dace9d2b0ab92044cb3db101a37a38a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterRenderer: {fileID: 594574966}
 --- !u!1 &1991739452
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,7 +35,7 @@ public class CharaMovement : MonoBehaviour
     private void ApplyMovement(Vector2 direction)
     {
         // 움직임 함수
-        direction = direction * 15;
+        direction = direction * 5;
 
         movementRigidbody.velocity = direction;
     }
