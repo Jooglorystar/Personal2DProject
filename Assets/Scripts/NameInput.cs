@@ -21,10 +21,16 @@ public class NameInput : MonoBehaviour
         
     }
 
-    public void StartButton()
+    public void FinishButton()
     {
         charaData.CurrentData.charaName = inputPlayerName.text;
-        GameManager.instance.isStart = true;
+        GameManager.instance.isPause = false;
         this.gameObject.SetActive(false);
+    }
+
+    public void OpenNameEdit()
+    {
+        GameManager.instance.isPause = true;
+        this.gameObject.SetActive(true);
     }
 }
