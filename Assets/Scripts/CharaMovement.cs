@@ -13,10 +13,14 @@ public class CharaMovement : MonoBehaviour
 
     private Vector2 movementDirection = Vector2.zero;
 
+    private CharaDataHandler stats;
+
     private void Awake()
     {
         movementController = GetComponent<CharaController>();
         movementRigidbody = GetComponent<Rigidbody2D>();
+
+        stats = GetComponent<CharaDataHandler>();
     }
 
     private void Start()

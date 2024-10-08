@@ -8,8 +8,9 @@ public class PlayerInputController : CharaController
     private float PlayerX;
     private float PlayerY;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _camera = Camera.main;
     }
 
