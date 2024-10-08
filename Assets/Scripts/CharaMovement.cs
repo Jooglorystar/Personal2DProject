@@ -51,7 +51,7 @@ public class CharaMovement : MonoBehaviour
     private void ApplyMovement(Vector2 direction)
     {
         // 움직임 함수
-        direction = direction * 5;
+        direction = direction * stats.CurrentData.charaSpeed;
 
         movementRigidbody.velocity = direction;
     }
