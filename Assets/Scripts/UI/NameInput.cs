@@ -5,25 +5,12 @@ using UnityEngine;
 
 public class NameInput : MonoBehaviour
 {
-    public TextMeshProUGUI inputPlayerName;
-    public CharaDataHandler charaData;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private TextMeshProUGUI inputPlayerName;
+    [SerializeField] private CharaDataHandler charaData;
 
     public void FinishButton()
     {
-        charaData.CurrentData.charaName = inputPlayerName.text;
+        charaData.CurrentData.dataSO.charaName = inputPlayerName.text;
         GameManager.instance.isPause = false;
         this.gameObject.SetActive(false);
     }

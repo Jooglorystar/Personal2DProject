@@ -15,6 +15,6 @@ public class DisplayCharaName : MonoBehaviour
 
     public void ResetPlayerName()
     {
-        playerName.text = charaData.CurrentData.charaName;
+        playerName.text = charaData.CurrentData.dataSO.charaName;
     }
 }

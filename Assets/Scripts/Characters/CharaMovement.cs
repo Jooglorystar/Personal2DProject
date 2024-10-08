@@ -1,7 +1,4 @@
-﻿using System;
-using System.Xml.Serialization;
-using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
+﻿using UnityEngine;
 
 public class CharaMovement : MonoBehaviour
 {
@@ -51,7 +48,7 @@ public class CharaMovement : MonoBehaviour
     private void ApplyMovement(Vector2 direction)
     {
         // 움직임 함수
-        direction = direction * stats.CurrentData.charaSpeed;
+        direction = direction * stats.CurrentData.dataSO.charaSpeed;
 
         movementRigidbody.velocity = direction;
     }
