@@ -5,9 +5,20 @@ public class PlayerInputController : CharaController
 {
     private Camera _camera;
 
+    private float PlayerX;
+    private float PlayerY;
+
     private void Awake()
     {
         _camera = Camera.main;
+    }
+
+    private void Update()
+    {
+        PlayerX = transform.position.x;
+        PlayerY = transform.position.y;
+
+        _camera.transform.position = new Vector3 (PlayerX, PlayerY, _camera.transform.position.z);
     }
 
     public void OnMove(InputValue value)

@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Xml.Serialization;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class CharaMovement : MonoBehaviour
 {
+    private float playerX;
+    private float playerY;
+
     private CharaController movementController;
     private Rigidbody2D movementRigidbody;
 
@@ -18,6 +22,14 @@ public class CharaMovement : MonoBehaviour
     private void Start()
     {
         movementController.OnMoveEvent += Move;
+    }
+
+    private void Update()
+    {
+        playerX = transform.position.x;
+        playerY = transform.position.y;
+
+        Camera.main.transform.position = new Vector3(playerX, playerY, Camera.main.transform.position.z);
     }
 
     private void FixedUpdate()
