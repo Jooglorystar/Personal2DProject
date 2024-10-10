@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public bool isPause = false;
+    public bool isPause = true;
 
     public static GameManager instance;
 
@@ -14,16 +14,5 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-    }
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

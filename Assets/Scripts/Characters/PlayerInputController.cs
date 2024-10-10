@@ -19,16 +19,15 @@ public class PlayerInputController : CharaController
         PlayerX = transform.position.x;
         PlayerY = transform.position.y;
 
-        _camera.transform.position = new Vector3 (PlayerX, PlayerY, _camera.transform.position.z);
+        _camera.transform.position = new Vector3(PlayerX, PlayerY, _camera.transform.position.z);
     }
 
     public void OnMove(InputValue value)
     {
-        if(!GameManager.instance.isPause)
-        {
-            Vector2 moveInput = value.Get<Vector2>().normalized;
-            CallMoveEvent(moveInput);
-        }
+        Vector2 moveInput;
+
+        moveInput = value.Get<Vector2>().normalized;
+        CallMoveEvent(moveInput);
     }
 
     public void OnLook(InputValue value)
