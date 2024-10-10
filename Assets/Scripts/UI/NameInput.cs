@@ -13,13 +13,16 @@ public class NameInput : MonoBehaviour
     {
         Player.SetActive(true);
         charaData.CurrentData.dataSO.charaName = inputPlayerName.text;
-        GameManager.instance.isPause = false;
+        CharaList.CharaNames.Add(charaData.CurrentData.dataSO.charaName);
+        GameManager.Instance.isPause = false;
         this.gameObject.SetActive(false);
     }
 
     public void OpenNameEdit()
     {
-        GameManager.instance.isPause = true;
+        GameManager.Instance.isPause = true;
+        Player.SetActive(false);
+        CharaList.CharaNames.Remove(charaData.CurrentData.dataSO.charaName);
         this.gameObject.SetActive(true);
     }
 }

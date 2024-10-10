@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
+    public Transform Player {  get; private set; }
     public bool isPause = true;
 
-    public static GameManager instance;
+    private CharaList charaList;
 
     public void Awake()
     {
-        if(instance == null )
+        if(Instance == null )
         {
-            instance = this;
+            Instance = this;
+        }
+        
+        charaList = GetComponent<CharaList>();
+    }
+
+    public void Start()
+    {
+        GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
+
+        if (characters.Length > 0)
+        {
+            foreach (GameObject character in characters)
+            {
+                CharaDataHandler charaData = character.GetComponent<CharaDataHandler>();
+                CharaList.CharaNames.Add(charaData.CurrentData.dataSO.charaName);
+            }
+        }
+        else
+        {
+            Debug.Log("Nothing!");
         }
     }
 }
