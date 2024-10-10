@@ -5,15 +5,10 @@ using UnityEngine;
 public class CharaListBtn : MonoBehaviour
 {
     [SerializeField] private GameObject CharaListPanel;
+    [SerializeField] private CharaList charaList;
 
     private bool isOpen = false;
-    private CharaList charaList;
-
-    public void Awake()
-    {
-        charaList = CharaListPanel.GetComponent<CharaList>();
-    }
-
+    
     public void CharaListButton()
     {
         if (!isOpen)

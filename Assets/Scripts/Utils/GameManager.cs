@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public Transform Player {  get; private set; }
     public bool isPause = true;
 
-    private CharaList charaList;
+    [SerializeField]private CharaList charaList;
 
     public void Awake()
     {
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             foreach (GameObject character in characters)
             {
                 CharaDataHandler charaData = character.GetComponent<CharaDataHandler>();
-                CharaList.CharaNames.Add(charaData.CurrentData.dataSO.charaName);
+                CharaList.AddCharacterList(charaData.CurrentData.dataSO.charaName);
             }
         }
         else

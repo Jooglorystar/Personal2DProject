@@ -13,7 +13,7 @@ public class NameInput : MonoBehaviour
     {
         Player.SetActive(true);
         charaData.CurrentData.dataSO.charaName = inputPlayerName.text;
-        CharaList.CharaNames.Add(charaData.CurrentData.dataSO.charaName);
+        CharaList.AddCharacterList(charaData.CurrentData.dataSO.charaName);
         GameManager.Instance.isPause = false;
         this.gameObject.SetActive(false);
     }
@@ -22,7 +22,7 @@ public class NameInput : MonoBehaviour
     {
         GameManager.Instance.isPause = true;
         Player.SetActive(false);
-        CharaList.CharaNames.Remove(charaData.CurrentData.dataSO.charaName);
+        CharaList.RemoveCharacterList(charaData.CurrentData.dataSO.charaName);
         this.gameObject.SetActive(true);
     }
 }
