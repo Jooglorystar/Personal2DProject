@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29630d18b0cdb44cbb31d159ca06430, type: 3}
   m_Name: OrcWarriorDataSO
   m_EditorClassIdentifier: 
-  charaName: Default
+  charaName: "\uC624\uD06C \uC804\uC0AC"
   charaSpeed: 5

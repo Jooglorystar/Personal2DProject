@@ -218,7 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f4a5899f3b584c46bed5b522e1dd8e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d16e067617de25641be8f7161dbf9609, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -239,7 +239,7 @@ Animator:
   m_GameObject: {fileID: 338898945}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0b6d54459d92e8a4d91e09a345a41dc0, type: 2}
+  m_Controller: {fileID: 9100000, guid: e66c662800591784f87ccc2f932cb667, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7765,7 +7765,6 @@ GameObject:
   - component: {fileID: 1182185370}
   - component: {fileID: 1182185369}
   - component: {fileID: 1182185368}
-  - component: {fileID: 1182185367}
   - component: {fileID: 1182185366}
   - component: {fileID: 1182185365}
   - component: {fileID: 1182185364}
@@ -7790,7 +7789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseData:
-    dataSO: {fileID: 11400000, guid: 7a7198ba33b9bb7408fee9bcc49c73ff, type: 2}
+    dataSO: {fileID: 11400000, guid: d054378f13d0af5489309271a057d315, type: 2}
 --- !u!114 &1182185364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7828,36 +7827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c552e19d434bb4c8182fa19936df7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1182185367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182185362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 4f95dcc23d4d1094f87e02b5de786691, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!50 &1182185368
 Rigidbody2D:
   serializedVersion: 4
@@ -8039,7 +8008,6 @@ GameObject:
   - component: {fileID: 1398129056}
   - component: {fileID: 1398129055}
   - component: {fileID: 1398129054}
-  - component: {fileID: 1398129053}
   - component: {fileID: 1398129052}
   - component: {fileID: 1398129051}
   - component: {fileID: 1398129050}
@@ -8064,7 +8032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseData:
-    dataSO: {fileID: 11400000, guid: 7a7198ba33b9bb7408fee9bcc49c73ff, type: 2}
+    dataSO: {fileID: 11400000, guid: 288abc21040e0b5429f195796c485415, type: 2}
 --- !u!114 &1398129050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8102,36 +8070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c552e19d434bb4c8182fa19936df7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1398129053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398129048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 4f95dcc23d4d1094f87e02b5de786691, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!50 &1398129054
 Rigidbody2D:
   serializedVersion: 4
@@ -8651,7 +8589,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f4a5899f3b584c46bed5b522e1dd8e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36a9c10418178994ab1298639357d7e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8672,7 +8610,7 @@ Animator:
   m_GameObject: {fileID: 1521632535}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0b6d54459d92e8a4d91e09a345a41dc0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9ada167c2edb1404ba15f58388f370e2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
