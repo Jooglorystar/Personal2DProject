@@ -25,8 +25,14 @@ public class PlayerInputController : CharaController
     public void OnMove(InputValue value)
     {
         Vector2 moveInput;
-
-        moveInput = value.Get<Vector2>().normalized;
+        if(!GameManager.Instance.isPause)
+        {
+            moveInput = value.Get<Vector2>().normalized;
+        }
+        else
+        {
+            moveInput = Vector2.zero;
+        }
         CallMoveEvent(moveInput);
     }
 

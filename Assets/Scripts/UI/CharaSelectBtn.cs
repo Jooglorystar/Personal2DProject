@@ -1,55 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
 
 public class CharaSelectBtn : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer playerSprite;
-    [SerializeField] private Animator playerAnimator;
+    private CharaSelect charaSelect;
 
-    [SerializeField] private GameObject knight01Panel;
-    [SerializeField] private GameObject knight02Panel;
-    [SerializeField] private GameObject Elf01Panel;
-
-    [SerializeField] private Sprite knight01Image;
-    [SerializeField] private Sprite knight02Image;
-    [SerializeField] private Sprite Elf01Image;    
-    
-    [SerializeField] private AnimatorController knight01Controller;
-    [SerializeField] private AnimatorController knight02Controller;
-    [SerializeField] private AnimatorController Elf01Controller;
-
-    void Start()
+    private void Awake()
     {
-        Knight01Select();
+        charaSelect = GetComponent<CharaSelect>();
     }
 
-    public void Knight01Select()
+    public void Knight01SelectButton()
     {
-        playerSprite.sprite = knight01Image;
-        playerAnimator.runtimeAnimatorController = knight01Controller;
-        knight01Panel.SetActive(true);
-        knight02Panel.SetActive(false);
-        Elf01Panel.SetActive(false);
+        charaSelect.Knight01Select();
     }
 
-    public void Knight02Select()
+    public void Knight02SelectButton()
     {
-        playerSprite.sprite = knight02Image;
-        playerAnimator.runtimeAnimatorController = knight02Controller;
-        knight01Panel.SetActive(false);
-        knight02Panel.SetActive(true);
-        Elf01Panel.SetActive(false);
+        charaSelect.Knight02Select();
     }
 
-    public void Elf01Select()
+    public void Elf01SelectButton()
     {
-        playerSprite.sprite = Elf01Image;
-        playerAnimator.runtimeAnimatorController = Elf01Controller;
-        knight01Panel.SetActive(false);
-        knight02Panel.SetActive(false);
-        Elf01Panel.SetActive(true);
+        charaSelect.Elf01Select();
     }
 }

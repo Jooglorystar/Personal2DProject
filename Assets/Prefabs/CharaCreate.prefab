@@ -194,7 +194,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 487775146539883660}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3219943074374549512}
+        m_TargetAssemblyTypeName: CharaSelectBtn, Assembly-CSharp
+        m_MethodName: Elf01SelectButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1247280470977895895
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,14 +331,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726846660033073808}
-  - component: {fileID: 7244560629568258829}
+  - component: {fileID: 4647060975271463357}
   m_Layer: 5
-  m_Name: NameInput
+  m_Name: CharaCreate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &726846660033073808
 RectTransform:
   m_ObjectHideFlags: 0
@@ -347,7 +359,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7244560629568258829
+--- !u!114 &4647060975271463357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,11 +368,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3739662676644937775}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5009326cfcdf2bc46b5c7dcf3c752155, type: 3}
+  m_Script: {fileID: 11500000, guid: 889709a5c5cb3ba48ab1b2ac0816a855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inputPlayerName: {fileID: 4427485971097607927}
   charaData: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &4565611092001071714
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,8 +423,9 @@ GameObject:
   - component: {fileID: 4020165450779027750}
   - component: {fileID: 5075613219747173204}
   - component: {fileID: 43254682823377035}
+  - component: {fileID: 4996291059623283638}
   m_Layer: 5
-  m_Name: Button
+  m_Name: FinishButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -519,9 +533,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7244560629568258829}
-        m_TargetAssemblyTypeName: NameInput, Assembly-CSharp
-        m_MethodName: FinishButton
+      - m_Target: {fileID: 4996291059623283638}
+        m_TargetAssemblyTypeName: CharaCreateBtn, Assembly-CSharp
+        m_MethodName: FinishCharaCreate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -531,18 +545,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DisplayCharaName, Assembly-CSharp
-        m_MethodName: ResetPlayerName
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &4996291059623283638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4612063491391594763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7579ce4f726f98e4f9f05801b6896099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charaCreate: {fileID: 4647060975271463357}
 --- !u!1 &4700572557400688576
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +608,7 @@ GameObject:
   - component: {fileID: 8947959671129973528}
   - component: {fileID: 8122429593502433214}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: NameInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -766,6 +781,8 @@ GameObject:
   - component: {fileID: 2530478589660235695}
   - component: {fileID: 529398012508204409}
   - component: {fileID: 5985870272701998078}
+  - component: {fileID: 3344281622866973272}
+  - component: {fileID: 3219943074374549512}
   m_Layer: 5
   m_Name: CharaBackGround
   m_TagString: Untagged
@@ -833,6 +850,41 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3344281622866973272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5251447003014664069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2f96f60c9bb074b99680a53f0b6eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSprite: {fileID: 0}
+  playerAnimator: {fileID: 0}
+  knight01Panel: {fileID: 6310275210544122230}
+  knight02Panel: {fileID: 5997775140117430796}
+  Elf01Panel: {fileID: 383140688495808390}
+  knight01Image: {fileID: 21300000, guid: 94b4a8b59d4ff3342bf614da72ca0d41, type: 3}
+  knight02Image: {fileID: 21300000, guid: 975f3fc77e22ed846911b3ca5acedac4, type: 3}
+  Elf01Image: {fileID: 21300000, guid: 2f4a5899f3b584c46bed5b522e1dd8e7, type: 3}
+  knight01Controller: {fileID: 9100000, guid: 872119ebea034e147af444fa0890ae41, type: 2}
+  knight02Controller: {fileID: 9100000, guid: b0532c8925a992645a0a43b81acd8e06, type: 2}
+  Elf01Controller: {fileID: 9100000, guid: 0b6d54459d92e8a4d91e09a345a41dc0, type: 2}
+--- !u!114 &3219943074374549512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5251447003014664069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0994e76e65930dd478daf58589b3ca61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5353450242464476292
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +1004,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 781342420243264399}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3219943074374549512}
+        m_TargetAssemblyTypeName: CharaSelectBtn, Assembly-CSharp
+        m_MethodName: Knight01SelectButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5383865417992743419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1184,7 @@ GameObject:
   - component: {fileID: 1119482639983074904}
   - component: {fileID: 7458041523743062260}
   m_Layer: 5
-  m_Name: Knight02Panel (1)
+  m_Name: Knight02Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1697,4 +1761,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2514379627360090568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3219943074374549512}
+        m_TargetAssemblyTypeName: CharaSelectBtn, Assembly-CSharp
+        m_MethodName: Knight02SelectButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

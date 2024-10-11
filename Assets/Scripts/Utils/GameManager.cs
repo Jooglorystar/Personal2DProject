@@ -37,5 +37,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Nothing!");
         }
+        isPause = true;
     }
 }
