@@ -8,17 +8,25 @@ public class Conversation : MonoBehaviour
     [SerializeField] GameObject Player;
     [SerializeField] GameObject ConversationPanel;
     [SerializeField] TextMeshProUGUI CharaNameText;
-    CharaDataHandler charaData;
+    public CharaDataHandler charaData;
+    ConversationStart conversationStart;
+
+    public bool isTalking;
+
+    private void Awake()
+    {
+        charaData = this.GetComponentInParent<CharaDataHandler>();
+        conversationStart = GetComponent<ConversationStart>();
+    }
 
     private void Start()
     {
         ConversationPanel.SetActive(false);
+        isTalking = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        charaData = this.GetComponentInParent<CharaDataHandler>();
-
         if (collision.gameObject == Player)
         {
             ConversationPanel.SetActive(true);
@@ -28,9 +36,13 @@ public class Conversation : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == Player)
+        if (collision.gameObject == Player && ConversationPanel)
         {
             ConversationPanel.SetActive(false);
+        }
+        if (isTalking)
+        {
+            conversationStart.EndConversation();
         }
     }
 }
